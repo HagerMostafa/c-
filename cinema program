@@ -1,0 +1,119 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{        
+    
+    cout<<"\t\t\t Welcome To City Stars Cinema \t\t\t"<<endl<<endl;
+    cout << " the first movie is avenger and one ticket cost 75.\n";
+    cout << " the second movie is rockstar and one ticket cost 100. \n\n\n";
+
+    int i=1 ;
+    int movie;
+    int num_ticket1;
+    int num_ticket2;
+    
+    int total_ticket1;
+    int total_ticket2;
+    
+    
+    int sum_ticket1=0;
+    int sum_ticket2=0;
+    
+    int avalible_tickets1;
+    int avalible_tickets2;
+    
+    
+
+    
+    
+    for(i=1; i<=100; i++)
+    {   
+        
+        cout << "Which movie do you want to watch: " ;
+        cin >> movie;
+        
+        
+    
+        switch (movie)
+     {
+         
+         
+        case 1:
+        cout << "How Many tickets you want: ";
+        
+          cin >> num_ticket1;
+          
+            sum_ticket1+=num_ticket1;
+            avalible_tickets1=abs(sum_ticket1- num_ticket1-150);
+            
+          if (sum_ticket1>150){
+            
+            cout<<"sorry the only avalible tickets for the first morive are "<< avalible_tickets1 <<endl;
+            
+            sum_ticket1-=num_ticket1;
+            i--;
+              break;}
+            
+            
+        total_ticket1= 75*num_ticket1;
+        
+        cout << "The total price is " << total_ticket1 <<endl;
+           
+        cout<<"_____________________________________"  ;
+        cout<<endl;
+        cout<<endl;
+        
+      
+        break;
+        
+        
+        case 2:
+        cout << "How Many tickets you want: ";
+        cin >> num_ticket2;
+        
+        sum_ticket2+=num_ticket2;
+        avalible_tickets2=abs(sum_ticket2- num_ticket2-150);
+        
+        if (sum_ticket2>150){
+            
+            cout<<"sorry avalible tickets = "<< avalible_tickets2 ;
+            
+            sum_ticket2-=num_ticket2;
+            
+            i--;
+            break;
+            
+        }
+        
+        total_ticket2= 100*num_ticket2;
+        cout << "The total price is " << total_ticket2 <<"."<<endl;
+        
+        cout<<"_____________________________________"  ;
+        cout<<endl;
+        cout<<endl;
+        
+        break;
+        
+        default :
+        cout<<"there are only two movies please press 1 or 2";
+        i--;
+        
+        cout<<endl <<endl;
+        break;
+        
+        
+        }
+      
+     cout <<endl; 
+     
+     }
+     
+     cout <<"there have been " <<sum_ticket1 << " tickets sold for hall 1"<<endl;
+     cout << "ther have been "<<sum_ticket2 <<" tickets sold for hall 2"<<endl;
+    
+        
+
+    return 0;
+}
